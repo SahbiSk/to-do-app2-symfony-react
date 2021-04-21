@@ -24,7 +24,10 @@ const TodoContextProvider = (props) => {
   ]);
 
   //create
-  function createTodo() {}
+  function createTodo(e, todo) {
+    e.preventDefault();
+    setTodos([todo, ...todos]);
+  }
   //read
   function readTodo() {}
   //update
